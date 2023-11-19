@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name=”robots” content=”noindex” />
+  <title>初級編</title>
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <!-- google font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@300;400;500&display=swap" rel="stylesheet">
+  <!-- wow.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+
+</head>
+<body>
+  <div id="js_loading" class="bl_loading">
+    <div class="bl_loadingCircle"></div>
+    <div class="bl_loadingText">loading...</div>
+  </div>
+  
+  <header class="header">
+    <div class="header__container">
+      <div class="header__icon">
+        <img src="./img/logo.png" alt="">
+        <h1 class="header__icon-title">サニーホーム</h1>
+      </div>
+      <nav class="header__nav">
+        <ul class="header__list">
+          <li class="header__item">
+            <a href="#service" class="header__item-link">サービス</a>
+          </li>
+          <li class="header__item">
+            <a href="#flow" class="header__item-link">ご利用の流れ</a>
+          </li>
+          <li class="header__item">
+            <a href="#access" class="header__item-link">アクセス</a>
+          </li>
+          <li class="header__item">
+            <a href="#news" class="header__item-link">お知らせ</a>
+          </li>
+          <li class="header__item">
+            <a href="./contact.html" class="header__item-link">お問い合わせはこちら</a>
+          </li>
+        </ul>
+      </nav>
+      <nav class="sp header__nav-sp">
+        <a href="contact.html">
+          <div class="sp header__nav__contact-sp">
+            <img src="./img/top_sp/Rectangle 127.png" alt="">
+          </div>
+          <div class="header__nav-sp-title">お問い合わせ</div>
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="drawer-icon">
+    <div class="drawer-icon__bars">
+      <div class="drawer-icon__bar1"></div>
+      <div class="drawer-icon__bar2"></div>
+      <div class="drawer-icon__bar3"></div>
+    </div>
+    <div class="drawer__menu">メニュー</div>
+  </div>
+
+  <div class="drawer-content">
+    <div class="drawer-content__items">
+      <div class="drawer-content__item"><a href="#service">サービス</a></div>
+      <div class="drawer-content__item"><a href="#flow">ご利用の流れ</a></div>
+      <div class="drawer-content__item"><a href="#access">アクセス</a></div>
+      <div class="drawer-content__item"><a href="#news">お知らせ</a></div>
+      <div class="section__toContact">
+        <a href="./contact.html">お問い合わせはこちら</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="drawer-background"></div>
+
+  <section class="fv">
+    <p class="fv__text fv__text1">心 か ら の ケ ア と</p>
+    <p class="fv__text fv__text2">安 心 を お 届 け し ま す</p>
+  </section>
+
+  <section class="section sv">
+    <div class="container">
+      <h2 class="sv__title">明るく優しいスタッフが<br>家族のような温かいサポート</h2>
+      <p class="sv__text">私たちのスタッフは、あたたかく明るい笑顔で迎え、家族のような絆を築きます。あなたやご家族のニーズや希望に真摯に耳を傾け、心配りと思いやりを持ってサポートいたします。</p>
+      <div class="sv__img1">
+        <img class="pc" src="./img/top_pc/Ellipse 25.png" alt="">
+        <img class="sp" src="./img/top_sp/Ellipse 25.png" alt="">
+      </div>
+      <div class="sv__img2">
+        <img src="./img/top_pc/Ellipse 26.png" alt="">
+      </div>
+    </div>
+  </section>
+
+  <section id="service" class="section service">
+    <div class="section__container container">
+      <h2 class="section__title">サニーホームのサービス</h2>
+      <ul class="service__list">
+        <li class="service__item">
+          <div class="service__item__wrapper">
+            <div class="service__item__head">
+              <div class="service__item-num">01</div>
+              <h3 class="service__item-title">安心できる居住環境</h3>
+            </div>
+            <ul class="service__item-text">
+              <li class="service__item-text-p">
+                快適な個室や共同スペースを提供し、利用者が安心して生活できる環境を整えています。
+              </li>
+              <li class="service__item-text-p">
+                24時間スタッフが常駐し、安全な生活をサポートします。
+              </li>
+            </ul>
+          </div>
+          <div class="service__item-img">
+            <img src="./img/top_pc/Rectangle 110.png" alt="">
+          </div>
+        </li>
+        <li class="service__item">
+          <div class="service__item__wrapper">
+            <div class="service__item__head">
+              <div class="service__item-num">02</div>
+              <h3 class="service__item-title">高品質なケアと医療サポート</h3>
+            </div>
+            <ul class="service__item-text">
+              <li class="service__item-text-p">専門の看護師や介護スタッフが健康管理や日常的な介護を行います。</li>
+              <li class="service__item-text-p">医師の定期的な訪問や緊急時の対応など、高品質な医療サポートを提供します。</li>
+            </ul>
+          </div>
+          <div class="service__item-img">
+            <img src="./img/top_pc/Rectangle 110 (1).png" alt="">
+          </div>
+        </li>
+        <li class="service__item">
+          <div class="service__item__wrapper">
+            <div class="service__item__head">
+              <div class="service__item-num">03</div>
+              <h3 class="service__item-title">社会的な交流と<wbr>レクリエーション</h3>
+            </div>
+            <ul class="service__item-text">
+              <li class="service__item-text-p">快適な個室や共同スペースを提供し、利用者が安心して生活できる環境を整えています。</li>
+              <li class="service__item-text-p">24時間スタッフが常駐し、安全な生活をサポートします。</li>
+            </ul>
+          </div>
+          <div class="service__item-img">
+            <img src="./img/top_pc/Rectangle 111.png" alt="">
+          </div>
+        </li>
+        <li class="service__item">
+          <div class="service__item__wrapper">
+            <div class="service__item__head">
+              <div class="service__item-num">04</div>
+              <h3 class="service__item-title">心のケアと精神的な支援</h3>
+            </div>
+            <ul class="service__item-text">
+              <li class="service__item-text-p">心理カウンセリングやレクリエーションセラピーなど、利用者の心の健康をサポートするプログラムを提供します。</li>
+              <li class="service__item-text-p">利用者の意欲や生きがいを引き出すための支援も行います。</li>
+            </ul>
+          </div>
+          <div class="service__item-img">
+            <img src="./img/top_pc/Rectangle 110 (2).png" alt="">
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="flow" class="section flow">
+    <div class="section__container container">
+      <h2 class="section__title">ご利用の流れ</h2>
+      <ul class="flow__list">
+        <li class="flow__item">
+          <div class="flow__item-num">1</div>
+          <h3 class="flow__item-title">お問い合わせ
+          <br>ご相談</h3>
+          <p class="flow__item-text">わからないことや不安に思うことがあれば、まずは気軽にお電話ください。</p>
+        </li>
+        <li class="flow__item">
+          <div class="flow__item-num">2</div>
+          <h3 class="flow__item-title">施設見学</h3>
+          <p class="flow__item-text">施設の雰囲気や設備、スタッフの対応などを実際にご覧いただけます。</p>
+        </li>
+        <li class="flow__item">
+          <div class="flow__item-num">3</div>
+          <h3 class="flow__item-title">面談とケアプランの作成</h3>
+          <p class="flow__item-text">面談でのお話をもとに、ニーズに合わせた個別のケアプランを作成します。</p>
+        </li>
+        <li class="flow__item">
+          <div class="flow__item-num">4</div>
+          <h3 class="flow__item-title">入居手続きと契約</h3>
+          <p class="flow__item-text">入居手続きには、必要な書類の提出や健康診断の実施などが含まれます。</p>
+        </li>
+      </ul>
+      <div class="section__toContact">
+        <a href="./contact.html">お問い合わせはこちら</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="news" class="section news">
+    <div class="section__container container">
+      <h2 class="section__title">お知らせ</h2>
+      <ul class="news__list">
+        <li class="news__item">
+          <a href="#">
+            <div class="news__item-date">2023/07/20</div>
+            <div class="news__item__wrapper">
+              <div class="news__item-category">イベント</div>
+              <div class="news__item-title">花火大会実施のお知らせ</div>
+            </div>
+          </a>
+        </li>
+        <li class="news__item">
+          <a href="#">
+            <div class="news__item-date">2023/05/14</div>
+            <div class="news__item__wrapper">
+              <div class="news__item-category">おでかけ</div>
+              <div class="news__item-title">休日イベント、ピクニックのお知らせ</div>
+            </div>
+          </a>
+        </li>
+        <li class="news__item">
+          <a href="#">
+            <div class="news__item-date">2023/04/14</div>
+            <div class="news__item__wrapper">
+              <div class="news__item-category">ニュース</div>
+              <div class="news__item-title">施設内のリニューアル工事について</div>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="access" class="section access">
+    <div class="section__container container">
+      <h2 class="section__title">アクセス</h2>
+      <div class="access__wrapper">
+        <div class="access__img">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d209990.24366958835!2d135.32122766432724!3d34.67748719304262!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000e6553406e2e1%3A0xc55bc16ee46a2fe7!2z5aSn6Ziq5bqc5aSn6Ziq5biC!5e0!3m2!1sja!2sjp!4v1694005451092!5m2!1sja!2sjp" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <p class="access__text">
+          〒562-0022<br>大阪府堺市1丁目００－０<br>○○駅から徒歩５分
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section contact">
+    <div class="section__container container">
+      <h2 class="contact__title">お問い合わせ</h2>
+      <p class="contact__text">豊かな暮らしと充実した日々、一緒に創りませんか？</p>
+      <div class="contact__wrapper">
+        <div class="contact__tel">
+          <a href="#">000-0000-0000</a>
+        </div>
+        <div class="section__toContact">
+          <a href="./contact.html">お問い合わせはこちら</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section lv">
+    <div class="section__container container">
+      <div class="lv__img"><img src="./img/logo.png" alt=""></div>
+      <h2 class="lv__title">サニーホーム</h2>
+      <ul class="lv__list">
+        <li class="lv__item">
+          <a href="#service" class="lv__item-link">サービス</a>
+        </li>
+        <li class="lv__item">
+          <a href="#flow" class="lv__item-link">ご利用の流れ</a>
+        </li>
+        <li class="lv__item">
+          <a href="#access" class="lv__item-link">アクセス</a>
+        </li>
+        <li class="lv__item">
+          <a href="#news" class="lv__item-link">お知らせ</a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <small class="footer__copyright">Copyright © サニーホーム All Rights Reserved.</small>
+  </footer>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+  <script src="./JavaScript/script.js"></script>
+</body>
+</html>

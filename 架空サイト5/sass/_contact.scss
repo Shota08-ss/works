@@ -1,0 +1,265 @@
+@charset "utf-8";
+
+@use "var" as var;
+@use "mixin" as mixin;
+@use "common";
+@use "header";
+@use "footer";
+
+.contact-form {
+  padding: 152px 0 160px;
+
+  &__wrapper {
+    background-color: var.color(accent);
+    padding: 96px 0 96px;
+    border-radius: 30px;
+
+    &__title {
+      font-size: 40px;
+      text-align: center;
+
+      @include mixin.mq('sp'){
+        font-size: 16px;
+      }
+
+      span {
+        position: relative;
+
+        &::before {
+          content: "";
+          position: absolute;
+          width: 25px;
+          height: 25px;
+          top: 50%;
+          left: -81px;
+          transform: translateY(-50%);
+          background-color: var.color(main);
+          border-radius: 50%;
+
+          @include mixin.mq('sp'){
+            width: 12px;
+            height: 12px;
+            left: -44px;
+          }
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          width: 25px;
+          height: 25px;
+          top: 50%;
+          right: -81px;
+          transform: translateY(-50%);
+          background-color: var.color(main);
+          border-radius: 50%;
+
+          @include mixin.mq('sp'){
+            width: 12px;
+            height: 12px;
+            right: -44px;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* ===============================================
+# form
+=============================================== */
+
+form{
+  width: 588px;
+  margin: 0 auto;
+  margin-top: 91px;
+  font-weight: 700;
+
+  @include mixin.mq('sp'){
+    width: 327px;
+  }
+}
+
+.contact-wrapper{
+  display: flex;
+  margin-top: 32px;
+  align-items: center;
+
+  &:not(:nth-child(3)){
+    justify-content: space-between;
+  }
+
+  @include mixin.mq('sp'){
+    display: block;
+    width: 280px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.contact-required{
+
+  span{
+    position: relative;
+
+    &::before{
+      content: '必須';
+      position: absolute;
+      color: var.color(text);
+      right: -64px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 50px;
+      padding: 3px 0;
+      background-color: var.color(main);
+      border-radius: 10px;
+      text-align: center;
+    }
+  }
+}
+
+input[type='date']{
+  width: 280px;
+  height: 40px;
+  border-radius: 5px;
+  background-color: var.$skyblue_02;
+  border: none;
+
+  @include mixin.mq('sp'){
+    margin-top: 14px;
+  }
+}
+
+input[type='text']{
+  width: 280px;
+  height: 40px;
+  border-radius: 5px;
+  background-color: var.$skyblue_02;
+  border: none;
+
+  @include mixin.mq('sp'){
+    margin-top: 14px;
+  }
+}
+
+.radio-sex {
+  display: flex;
+  gap: .3em 2em;
+  border: none;
+  margin-left: 236px;
+  padding: 0;
+  margin-top: 14px;
+
+  @include mixin.mq('sp'){
+    margin-left: 0;
+  }
+}
+
+.radio-sex label {
+  display: flex;
+  align-items: center;
+  gap: 0 .5em;
+  position: relative;
+  cursor: pointer;
+  font-weight: 400;
+}
+
+.radio-sex label::before,
+.radio-sex label::after {
+  border-radius: 50%;
+  content: '';
+  background-color: #fff;
+}
+
+.radio-sex label::before {
+  width: 18px;
+  height: 18px;
+  border: 2px solid gray;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+
+.radio-sex label::after {
+  position: absolute;
+  top: 50%;
+  left: 9px;
+  transform: translate(-50%, -50%);
+  width: 9px;
+  height: 9px;
+}
+
+.radio-sex label:has(:checked)::after {
+  background-color: gray;
+  animation: anim-radio-sex .3s linear;
+}
+
+@keyframes anim-radio-sex {
+  0% {
+      box-shadow: 0 0 0 1px transparent;
+  }
+  50% {
+      box-shadow: 0 0 0 10px #4d423733;
+  }
+  100% {
+      box-shadow: 0 0 0 10px transparent;
+  }
+}
+
+.radio-sex input {
+  display: none;
+}
+
+.contact__email{
+
+}
+
+input[type='email']{
+  width: 280px;
+  height: 40px;
+  border-radius: 5px;
+  background-color: var.$skyblue_02;
+  border: none;
+
+  @include mixin.mq('sp'){
+   height: 40px;
+   margin-top: 14px;
+  }
+}
+
+input[type='tel']{
+  width: 280px;
+  height: 40px;
+  border-radius: 5px;
+  background-color: var.$skyblue_02;
+  border: none;
+
+  @include mixin.mq('sp'){
+    margin-top: 14px;
+  }
+}
+
+button[type='submit']{
+  display: block;
+  width: 243px;
+  height: 46px;
+  line-height: 46px;
+  font-size: 14px;
+  color: var.color(text);
+  text-align: center;
+  margin-top: 51px;
+  margin-left: auto;
+  margin-right: auto;
+  cursor: pointer;
+  background-color: var.color(main);
+  border-radius: 10px;
+}
+
+.contact-message{
+  text-align: center;
+  margin-top: 60px;
+  display: none;
+
+  &.-error{
+    color: #f00;
+  }
+}

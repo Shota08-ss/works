@@ -1,0 +1,281 @@
+@charset "utf-8";
+
+@use "var" as var;
+@use "mixin" as mixin;
+@use "common";
+@use "header";
+@use "footer";
+
+body {
+  font-family: var.$font-ja, 'sans-serif';
+}
+
+/* ===============================================
+# select
+=============================================== */
+
+.select {
+  padding-top: 104px;
+  padding-bottom: 136px;
+
+  @include mixin.mq('sp'){
+    padding-top: 56px;
+    padding-bottom: 72px;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 36px;
+    margin-top: 104px;
+
+    @include mixin.mq('sp'){
+      width: 83%;
+      margin: 0 auto;
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 52px;
+    }
+  }
+
+  &__item {
+    text-align: center;
+    background-color: var.color(accent);
+    border-radius: 30px;
+
+    @include mixin.mq('sp'){
+      box-shadow: 0 4px 4px #00000040;
+      width: 264px;
+      margin: 0 auto;
+    }
+
+    &-num {
+      width: 72px;
+      height: 72px;
+      margin: 0 auto;
+      font-size: 40px;
+      line-height: 1;
+      padding: 16px 24px;
+      margin-top: 40px;
+      background-color: var.color(main);
+      border-radius: 24px;
+
+      @include mixin.mq('sp'){
+        font-size: 24px;
+        width: 56px;
+        height: 56px;
+        border-radius: 20px;
+        padding: 16px 0;
+        margin-top: 34px;
+      }
+    }
+
+    &-title {
+      font-size: 24px;
+      text-align: center;
+      margin-top: 32px;
+      padding-bottom: 68px;
+
+      @include mixin.mq('sp'){
+        font-size: 16px;
+        margin-top: 24px;
+        padding-bottom: 40px;
+      }
+    }
+  }
+
+  &__content {
+    padding-top: 126px;
+
+    @include mixin.mq('sp'){
+      padding-top: 75px;
+    }
+
+    &__item {
+      background-color: var.color(accent);
+      width: 95.6%;
+      margin: 0 auto;
+      border-radius: 30px;
+      padding: 40px 40px 64px;
+
+      @include mixin.mq('sp'){
+        padding: 29px 24px 40px;
+        width: calc(60% + 135px);
+      }
+
+      & + & {
+        margin-top: 136px;
+
+        @include mixin.mq('sp'){
+          margin-top: 40px;
+        }
+      }
+    }
+  }
+
+  &__wrapper {
+    &__top {
+      display: flex;
+      align-items: center;
+
+      &-num {
+        font-size: 40px;
+        width: 88px;
+        height: 88px;
+        background-color: var.color(main);
+        text-align: center;
+        line-height: 88px;
+        border-radius: 30px;
+
+        @include mixin.mq('sp'){
+          width: 56px;
+          height: 56px;
+          font-size: 24px;
+          line-height: 56px;
+          text-align: center;
+          border-radius: 20px;
+        }
+      }
+
+      &-title {
+        font-size: 32px;
+        margin-left: 24px;
+
+        @include mixin.mq('sp'){
+          font-size: 16px;
+        }
+      }
+    }
+
+    &__course {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 40px;
+      
+      @media screen and (max-width: 1024px) {
+        flex-direction: column-reverse;
+        margin-top: 24px;
+      }
+
+      &-content {
+        display: flex;
+        margin-top: 21px;
+
+        @media screen and (max-width: 1024px) {
+          justify-content: center;
+          gap: 8px;
+        }
+
+        &-name {
+          font-size: 20px;
+          padding: 21px 16px;
+          background-color: var.color(main);
+          border-radius: 20px;
+
+          @include mixin.mq('sp'){
+            white-space: nowrap;
+            font-size: 16px;
+            padding: 12px 28px;
+          }
+
+          & + & {
+            margin-left: 24px;
+
+            @include mixin.mq('sp'){
+              margin-left: 0;
+            }
+          }
+        }
+      }
+
+      &-price {
+        font-size: 48px;
+        line-height: 1;
+
+        @media screen and (max-width: 1024px) {
+          text-align: center;
+        }
+
+        @include mixin.mq('sp'){
+          font-size: 24px;
+          text-align: center;
+        }
+
+        span {
+          font-size: 96px;
+          line-height: 1;
+          letter-spacing: 0.08em;
+
+          @include mixin.mq('sp'){
+            font-size: 36px;
+          }
+        }
+      }
+    }
+
+    &__detail {
+
+      &:nth-child(1) {
+        margin-top: 72px;
+
+        @include mixin.mq('sp'){
+          margin-top: 32px;
+        }
+      }
+
+      &:not(:nth-child(1)) {
+        margin-top: 48px;
+
+        @include mixin.mq('sp'){
+          margin-top: 16px;
+        }
+      }
+
+      &-title {
+        font-size: 24px;
+
+        @include mixin.mq('sp'){
+          font-size: 16px;
+        }
+      }
+
+      &-content {
+        margin-top: 24px;
+        margin-left: 40px;
+
+        @include mixin.mq('sp'){
+          margin-top: 16px;
+          margin-left: 24px;
+        }
+      }
+
+      &-description {
+        position: relative;
+
+        @include mixin.mq('sp'){
+          font-size: 14px;
+        }
+
+        & + & {
+          margin-top: 4px;
+        }
+
+        &::before {
+          position: absolute;
+          content: "";
+          width: 16px;
+          height: 16px;
+          top: 2px;
+          left: -40px;
+          background-color: var.color(main);
+          border-radius: 50%;
+
+          @include mixin.mq('sp'){
+            left: -24px;
+          }
+        }
+      }
+    }
+  }
+}

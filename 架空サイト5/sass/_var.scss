@@ -1,0 +1,25 @@
+$skyblue_2: #BBCCD1;
+$gray_02: #4E4E4E;
+$white: #FFFFFF;
+$gray_01: #F4F0F0;
+$skyblue_01: #7FB0BF;
+$white_02: #C6C6C6;
+$skyblue_02: #CFDBE1;
+$white_03: #EDEFF0;
+$blue_03: #F1F7F8;
+
+$font-en: Noto Sans JP;
+$font-ja: Roboto;
+
+$colors: (
+  main: $skyblue_01,
+  sub: $skyblue_2,
+  accent: $white,
+  sub-accent: $gray_02,
+  text: $gray_02,
+  sub-text: $white
+);
+
+@function color($color) {
+  @return #{map-get($colors, $color)}
+}

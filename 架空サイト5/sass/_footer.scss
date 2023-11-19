@@ -1,0 +1,72 @@
+@charset "utf-8";
+
+@use "var" as var;
+@use "mixin" as mixin;
+@use "common" as common;
+
+/* ===============================================
+# option
+=============================================== */
+
+.option {
+  background-color: var.color(sub);
+  padding: 64px 0 80px;
+  text-align: center;
+
+  @include mixin.mq('sp'){
+    padding: 18px 0 41px;
+  }
+
+  &__img {
+    width: 96px;
+    height: 96px;
+    margin: 0 auto;
+
+    @include mixin.mq('sp'){
+      width: 72px;
+      height: 72px;
+    }
+  }
+
+  &__title {
+    font-size: 64px;
+    margin-top: 40px;
+
+    @include mixin.mq('sp'){
+      font-size: 40px;
+      margin-top: 16px;
+      line-height: 1.5;
+    }
+  }
+
+  &__list {
+    display: flex;
+    gap: 32px;
+    justify-content: center;
+  }
+
+  &__item {
+
+    &-link {
+      color: var.color(text);
+    }
+  }
+}
+
+/* ===============================================
+# footer
+=============================================== */
+
+.footer {
+  padding: 43px 0;
+  text-align: center;
+  background-color: var.color(main);
+
+  @include mixin.mq('sp'){
+    padding: 24px 0;
+  }
+
+  &-copyright {
+    font-size: 10px;
+  }
+}
